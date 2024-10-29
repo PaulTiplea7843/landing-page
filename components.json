@@ -7,17 +7,14 @@
     "config": "tailwind.config.js",
     "css": "src/app/globals.css",
     "baseColor": "neutral",
-    "cssVariables": false,
+    "cssVariables": true,
     "prefix": ""
   },
   "aliases": {
     "components": "@/components",
-    "utils": "@/lib/utils"
-  },
-  "registries": [
-    {
-      "name": "shadcn",
-      "baseUrl": "https://ui.shadcn.com"
-    }
-  ]
+    "utils": "@/lib/utils",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  }
 }
