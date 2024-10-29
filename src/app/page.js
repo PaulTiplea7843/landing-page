@@ -4,7 +4,9 @@ import PricingTable from "./components/pricing-table";
 import Logo from "../app/svg/logo";
 import ilustration from "../app/svg/ilustration.svg";
 import ProfileCounter from "./components/profileCounter";
-
+import ProjectBriefGenerator from "./components/projectBrief";
+import BriefCard from "./components/BriefCard";
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="bg-slate-50 min-h-screen flex flex-col items-center px-4 sm:px-8 lg:px-16">
@@ -34,11 +36,13 @@ export default function Home() {
 
       {/* Feature Section */}
       <section className="">
-        <div className="border border-[#A8A8A81A] rounded-[40px]">
-          <img
+        <div className=" border border-[#A8A8A81A] bg-[#A8A8A81A] rounded-[40px] w-[976px] max-w-[976px] h-[528px] p-1">
+          <Image
             src={ilustration.src}
             alt="AI Content Creation Illustration"
             className="max-w-full h-auto p-1.5"
+            width={960}
+            height={528}
           />
         </div>
 
@@ -50,14 +54,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-
-      {/* Call to Action */}
-      <section className="py-20 text-center">
-        <h2 className="text-2xl font-bold text-gray-900">
-          Start crafting brilliant briefs today
-        </h2>
+      <section className="py-20">
+        <div className="border border-[#A8A8A81A] bg-[#A8A8A81A] w-[976px] max-w-[976px] rounded-[40px] p-1">
+          <ProjectBriefGenerator />
+          <div className="flex justify-between p-1">
+            <BriefCard />
+            <BriefCard />
+          </div>
+        </div>
       </section>
+
+      {/* Pricing Section */}
 
       <footer className="py-10 text-sm text-gray-500 text-center">
         © 2024 Your Company Name. All rights reserved.
