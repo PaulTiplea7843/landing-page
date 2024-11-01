@@ -1,12 +1,12 @@
 import Image from "next/image";
-import notice from "../svg/notice.svg";
-import cardImage from "../svg/cardImage.svg";
+import arrow from "../svg/arrow.svg";
+import brief2 from "../svg/brief2.svg";
 
-const BriefCard = () => {
+const BriefCardTwo = () => {
   return (
     <div className="w-[472px]  max-w-[472px] rounded-[40px] bg-[#E2E2E2] mt-2">
       <Image
-        src={cardImage.src}
+        src={brief2.src}
         alt="Card image"
         className="float-right"
         width={452}
@@ -15,19 +15,19 @@ const BriefCard = () => {
 
       <div className="pl-[50px] mb-4 py-10">
         <Image
-          src={notice.src}
+          src={arrow.src}
           alt="Arrow icon"
           width={24}
           height={24}
           className="pb-6"
         />
-        <h1 className="text-[#1B1B1B] text-2xl font-bold">Brieft management</h1>
+        <h1 className="text-[#1B1B1B] text-2xl font-bold">Quick share</h1>
         <p className="text-[#727272] text-base font-normal mt-3">
-          Effortlessly view, edit, and update project details as they evolve.
+          Instantly generate shareable links for your <br></br> project briefs.
         </p>
       </div>
     </div>
   );
 };
 
-export default BriefCard;
+export default BriefCardTwo;

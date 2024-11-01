@@ -7,6 +7,11 @@ import ProfileCounter from "./components/profileCounter";
 import ProjectBriefGenerator from "./components/projectBrief";
 import BriefCard from "./components/BriefCard";
 import Image from "next/image";
+import PremiumPricingCard from "./components/PricingCard";
+import FreePricingCard from "./components/basicPricingCard";
+import HeroSection from "./components/heroSection";
+import Footer from "./components/footer";
+import BriefCardTwo from "./components/BriefCardTwo";
 export default function Home() {
   return (
     <div className="bg-slate-50 min-h-screen flex flex-col items-center px-4 sm:px-8 lg:px-16">
@@ -36,11 +41,10 @@ export default function Home() {
 
       {/* Feature Section */}
       <section className="">
-        <div className=" border border-[#A8A8A81A] bg-[#A8A8A81A] rounded-[40px] w-[976px] max-w-[976px] h-[528px] p-1">
+        <div className=" border border-[#A8A8A81A] flex justify-center items-center bg-[#A8A8A81A]  rounded-[40px] w-[976px] max-w-[976px] h-[544px]">
           <Image
             src={ilustration.src}
             alt="AI Content Creation Illustration"
-            className="max-w-full h-auto p-1.5"
             width={960}
             height={528}
           />
@@ -55,20 +59,43 @@ export default function Home() {
       </section>
 
       <section className="py-20">
+        <h1 className="text-[44px] leading-[48px] font-bold text-[#1B1B1B]">
+          AI-powered briefs in seconds
+        </h1>
+        <p className="text-[#727272] text-lg leading-6 mt-4 text-center">
+          Save hours of preparation time with intelligent brief generation
+        </p>
+      </section>
+
+      <section className="py-20">
         <div className="border border-[#A8A8A81A] bg-[#A8A8A81A] w-[976px] max-w-[976px] rounded-[40px] p-1">
           <ProjectBriefGenerator />
           <div className="flex justify-between p-1">
             <BriefCard />
-            <BriefCard />
+            <BriefCardTwo />
           </div>
         </div>
       </section>
 
-      {/* Pricing Section */}
+      <div>
+        <h1 className="text-[44px] leading-[48px] font-bold text-[#1B1B1B] text-center">
+          Start for free and upgrade <br></br> to unlock more features
+        </h1>
+      </div>
 
-      <footer className="py-10 text-sm text-gray-500 text-center">
-        © 2024 Your Company Name. All rights reserved.
-      </footer>
+      {/* Pricing Section */}
+      <section className="py-20">
+        <div className="flex justify-center gap-4">
+          <FreePricingCard />
+          <PremiumPricingCard />
+        </div>
+      </section>
+
+      <section className="py-20">
+        <HeroSection />
+      </section>
+
+      <Footer />
     </div>
   );
 }
