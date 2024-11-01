@@ -23,14 +23,14 @@ const FreePricingCard = () => {
       </CardHeader>
 
       <CardContent className=" h-[192px]">
-        <ul className="">
+        <ul className="space-y-3">
           {features.map((feature, index) => (
-            <li key={index} className="flex items-center gap-2">
+            <li key={index} className="flex items-center gap-2 mt-2">
               <Check className="h-4 w-4 text-emerald-500 flex-shrink-0" />
               <span className="text-sm text-gray-600">{feature}</span>
             </li>
           ))}
-          <li className="flex items-center gap-2">
+          <li className="flex items-center gap-2 mt-2">
             <Zap className="h-4 w-4 text-purple-500 flex-shrink-0" />
             <span className="text-sm text-gray-600">
               <span className="text-purple-500">5</span> generation

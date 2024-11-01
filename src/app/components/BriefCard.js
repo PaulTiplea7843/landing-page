@@ -4,7 +4,7 @@ import cardImage from "../svg/cardImage.svg";
 
 const BriefCard = () => {
   return (
-    <div className="w-[472px]  max-w-[472px] rounded-[40px] bg-[#E2E2E2] mt-2">
+    <div className="w-[472px]  max-w-[472px] rounded-[40px] bg-[#E2E2E2] bg-[url('../assets/bg.png')] bg-cover bg-right-top mt-2">
       <Image
         src={cardImage.src}
         alt="Card image"
