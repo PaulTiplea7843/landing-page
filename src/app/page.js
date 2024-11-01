@@ -41,7 +41,7 @@ export default function Home() {
 
       {/* Feature Section */}
       <section className="">
-        <div className=" border border-[#A8A8A81A] flex justify-center items-center  bg-[url('../assets/bg.png')] bg-cover bg-bottom  rounded-[40px] w-[976px] max-w-[976px] h-[544px]">
+        <div className=" border border-[#A8A8A81A] flex justify-center items-center  rounded-[40px] w-[976px] max-w-[976px] h-[544px]">
           <Image
             src={ilustration.src}
             alt="AI Content Creation Illustration"
